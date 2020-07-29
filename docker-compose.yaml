@@ -1,0 +1,21 @@
+version: "3"
+
+networks:
+  asd:
+    driver: bridge
+
+services:
+  php:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - .:/src/app
+    networks:
+      - asd
+  mysql:
+    image: "mysql:5.7"
+    networks:
+      - asd
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
