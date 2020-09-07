@@ -3,7 +3,7 @@
 
 require "../vendor/autoload.php";
 
-$dbh = new \PDO('mysql:host=mysql;dbname=test','root','secret');
+$dbh = new \PDO('mysql:host=mysql;dbname=sandbox','root','secret');
 $dbh->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 function getPdo()
 {
